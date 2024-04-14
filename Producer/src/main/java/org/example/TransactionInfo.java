@@ -1,11 +1,8 @@
 package org.example;
 
-import org.apache.kafka.common.protocol.types.Field;
+import java.io.Serializable;
 
-import java.security.PublicKey;
-import java.security.SecureRandom;
-
-public class TransactionInfo
+public class TransactionInfo implements Serializable
 {
     private String name;
     private String location;
@@ -13,7 +10,7 @@ public class TransactionInfo
 
     public TransactionInfo()
     {}
-    public TransactionInfo (String name , String location , double amount)
+    public TransactionInfo(String name , String location , double amount)
     {
         this.amount = amount;
         this.name = name;
@@ -42,5 +39,11 @@ public class TransactionInfo
     public void setAmount(double amount)
     {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString()
+    {
+        return name+" , amount = " + amount;
     }
 }

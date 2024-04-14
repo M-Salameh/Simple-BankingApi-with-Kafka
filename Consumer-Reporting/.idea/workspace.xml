@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Consumer:jar" />
+      <artifact name="Consumer-Reporting:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,15 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68795978-b1a2-4702-95fa-e8e7afae617a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Consumer_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ReportingKafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/AccountManagerKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/AccountManagerKafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/DataBaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/TransactionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/TransactionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/DataBaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/TransactionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/TransactionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/UserNotificationKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/UserNotificationKafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/.idea/artifacts/Producer_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/.idea/artifacts/Producer_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/src/main/java/org/example/BankingAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/src/main/java/org/example/BankingAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/src/main/java/org/example/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/src/main/java/org/example/MyProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/src/main/java/org/example/MyProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/src/main/java/org/example/TransactionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/src/main/java/org/example/TransactionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/target/classes/org/example/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/target/classes/org/example/MyProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/target/classes/org/example/MyProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Producer/target/classes/org/example/TransactionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Producer/target/classes/org/example/TransactionInfo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +43,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,17 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/HIAST/FIY/SS/Advanced Distributed Systems/Lab/4/java-kafka-consumer/Consumer/src/main/resources",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/HIAST/FIY/SS/Advanced Distributed Systems/Lab/4/java-kafka-consumer/Consumer/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\HIAST\FIY\SS\Advanced Distributed Systems\Lab\4\java-kafka-consumer\Consumer\src\main\resources" />

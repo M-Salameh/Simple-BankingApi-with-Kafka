@@ -1,5 +1,6 @@
 package org.example;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import redis.clients.jedis.Jedis;
 
 public class DataBaseHandler
@@ -12,11 +13,17 @@ public class DataBaseHandler
 
     public static void notifyUser(String name)
     {
-        String _notify_num = jedis.hget(name, SUSPICIOUS_FIELD);
-        Integer notify_num = Integer.parseInt(_notify_num);
-        notify_num++;
-        jedis.hset(name , SUSPICIOUS_FIELD , notify_num.toString());
+
+        String jsonData = jedis.get(name);
+
+        MyRecord myRecord = new MyRecord();
+        myRecord.increaseNotification(jsonData);
+
+        jsonData = myRecord.toString();
+
+        if ((jsonData == null) ) return;
+
+        jedis.set(name , jsonData);
+
     }
-
-
 }

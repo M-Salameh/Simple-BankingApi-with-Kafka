@@ -12,12 +12,18 @@ public class DataBaseHandler
 
     public static boolean editAmount(String name , double amount)
     {
-        String _balance = jedis.hget(name, BALANCE_FIELD);
-        Double balance = Double.parseDouble(_balance);
-        if (amount > balance) return false;
-        balance -= amount;
-        jedis.hset(name , BALANCE_FIELD , balance.toString());
-        return true;
+        String jsonData = jedis.get(name);
+
+        MyRecord myRecord = new MyRecord();
+        boolean result = myRecord.modifyBalance(jsonData , amount);
+
+        jsonData = myRecord.toString();
+
+        if (jsonData == null) return false;
+        jedis.set(name , jsonData);
+
+
+        return result;
     }
 
 

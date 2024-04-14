@@ -1,0 +1,23 @@
+2024-03-24 00:20:55,909 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 00:21:56,393 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 00:25:02,236 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 00:26:02,655 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 00:28:25,348 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Mohammed
+2024-03-24 00:28:56,783 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 00:29:57,252 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 00:32:30,966 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Mohammed
+2024-03-24 00:32:45,233 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 00:33:45,649 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 00:35:35,496 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 00:36:35,925 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 00:37:28,690 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 00:38:29,154 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 01:06:19,508 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 01:07:20,030 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 01:08:23,020 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 01:09:23,452 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 01:12:51,541 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd
+2024-03-24 12:22:49,672 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Ali
+2024-03-24 12:23:50,148 ERROR org.example.MyProducer [main] Could Not Send Data to Kafka , Or Could Not Get Meta-Data
+2024-03-24 12:28:18,336 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Mohammed
+2024-03-24 12:30:44,947 INFO org.example.MyProducer [main] Registering A Transaction for Mr/Ms : Abd

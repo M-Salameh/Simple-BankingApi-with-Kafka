@@ -10,7 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9704b422-94d9-4d0a-8879-40f13e57ea0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/out/artifacts/Consumer_jar/Consumer.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/AccountManagerKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/AccountManagerKafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/DataBaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/TransactionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Account-Manager/src/main/java/org/example/TransactionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/.idea/artifacts/Consumer_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Reporting/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Reporting/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Reporting/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/src/main/java/org/example/ReportingKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Reporting/src/main/java/org/example/ReportingKafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/src/main/java/org/example/TransactionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Reporting/src/main/java/org/example/TransactionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-Reporting/target/classes/org/example/ReportingKafkaConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-Reporting/target/classes/org/example/ReportingKafkaConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/DataBaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/DataBaseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/TransactionInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/TransactionInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/UserNotificationKafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Consumer-User-Notification/src/main/java/org/example/UserNotificationKafkaConsumer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "D:/HIAST/FIY/SS/Advanced Distributed Systems/Lab/4/java-kafka-producer/Producer/Producer/src/main/java/org/example",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
@@ -45,6 +59,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\HIAST\FIY\SS\Advanced Distributed Systems\Lab\4\java-kafka-producer\Producer\Producer\src\main\java\org\example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

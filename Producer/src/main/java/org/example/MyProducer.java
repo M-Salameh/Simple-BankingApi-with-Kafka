@@ -14,39 +14,26 @@ import java.util.concurrent.ExecutionException;
 
 public class MyProducer
 {
-    private static final String TOPIC = "events";
-    private static final String BOOTSTRAP_SERVERS = "localhost:9092,localhost:9093,localhost:9094";
+    //private static final String TOPIC = "events";
+    private static final String BOOTSTRAP_SERVERS = "192.168.184.11:9092";
 
     private static final Logger log = LoggerFactory.getLogger(MyProducer.class);
 
-    public static void main(String[] args) throws JsonProcessingException
-    {
-        TransactionInfo transactionInfo = new TransactionInfo("Mohammed" , "Tartous" , 150.24);
-        boolean x = logTransaction(transactionInfo , TOPIC);
-    }
 
     public static boolean logTransaction(TransactionInfo transactionInfo , String topic)
     {
 
         log.info("Registering A Transaction for Mr/Ms : " + transactionInfo.getName());
-        ObjectMapper objectMapper = new ObjectMapper();
 
-        String value = null;
-        try
-        {
-            value = objectMapper.writeValueAsString(transactionInfo);
-        }
-        catch (JsonProcessingException e)
-        {
-            log.error("Transaction for Mr/Ms : " + transactionInfo.getName() + " Could Not Be Processed To Json");
-            return false;
-        }
+        TransactionInfo value = transactionInfo;
 
-        Producer<Long, String> kafkaProducer = createKafkaProducer(BOOTSTRAP_SERVERS);
+        Producer<Long, TransactionInfo> kafkaProducer = createKafkaProducer(BOOTSTRAP_SERVERS);
 
         long timeStamp = System.currentTimeMillis();
 
-        ProducerRecord<Long , String> record = new ProducerRecord<>(topic , timeStamp ,value);
+        System.out.println("topic : " + topic);
+        System.out.println("value : " + value);
+        ProducerRecord<Long , TransactionInfo> record = new ProducerRecord<>(topic , timeStamp ,value);
 
         RecordMetadata recordMetadata = null;
         try
@@ -56,7 +43,8 @@ public class MyProducer
         catch (InterruptedException | ExecutionException e)
         {
             log.error("Could Not Send Data to Kafka , Or Could Not Get Meta-Data");
-            return false;
+            throw new RuntimeException(e);
+            ///return false;
         }
 
 
@@ -79,12 +67,13 @@ public class MyProducer
 
     }
 
-    public static Producer<Long, String> createKafkaProducer(String bootstrapServers) {
+    public static Producer<Long, TransactionInfo> createKafkaProducer(String bootstrapServers) {
         Properties properties = new Properties();
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         properties.put(ProducerConfig.CLIENT_ID_CONFIG, "events-producer");
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, LongSerializer.class.getName());
-        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        //properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, TransactionInfo.class.getName());
 
         return new KafkaProducer<>(properties);
     }

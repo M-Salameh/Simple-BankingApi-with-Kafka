@@ -1,11 +1,12 @@
 package org.example;
 
-public class TransactionInfo
+import java.io.Serializable;
+
+public class TransactionInfo implements Serializable
 {
     private String name;
     private String location;
     private double amount;
-
 
     public TransactionInfo()
     {}
@@ -40,4 +41,9 @@ public class TransactionInfo
         this.amount = amount;
     }
 
+    @Override
+    public String toString()
+    {
+        return name+" , amount = " + amount;
+    }
 }

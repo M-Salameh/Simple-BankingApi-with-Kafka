@@ -1,11 +1,8 @@
 package org.example;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.kafka.common.protocol.types.Field;
+
 import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +13,7 @@ import java.util.Properties;
 public class ReportingKafkaConsumer
 {
     private static final String TOPIC = "events";
-    private static final String BOOTSTRAP_SERVERS = "localhost:9092,localhost:9093,localhost:9094";
+    private static final String BOOTSTRAP_SERVERS = "192.168.184.11:9092";
 
     static final Logger log = LoggerFactory.getLogger(ReportingKafkaConsumer.class);
 
@@ -30,53 +27,42 @@ public class ReportingKafkaConsumer
 
         System.out.println("Consumer is part of consumer group " + consumerGroup);
 
-        Consumer<Long, String> kafkaConsumer = createKafkaConsumer(BOOTSTRAP_SERVERS, consumerGroup);
+        Consumer<Long, TransactionInfo> kafkaConsumer = createKafkaConsumer(BOOTSTRAP_SERVERS, consumerGroup);
 
         consumeMessages(TOPIC, kafkaConsumer);
     }
 
-    public static void consumeMessages(String topic, Consumer<Long, String> kafkaConsumer)
+    public static void consumeMessages(String topic, Consumer<Long, TransactionInfo> kafkaConsumer)
     {
-        ObjectMapper objectMapper = new ObjectMapper();
-
         kafkaConsumer.subscribe(Collections.singletonList(topic));
 
         while (true)
         {
-            ConsumerRecords<Long, String> consumerRecords = kafkaConsumer.poll(Duration.ofSeconds(1));
+            ConsumerRecords<Long, TransactionInfo> consumerRecords = kafkaConsumer.poll(Duration.ofSeconds(1));
 
             if (consumerRecords.isEmpty()) continue;
 
-            for (ConsumerRecord<Long , String> record : consumerRecords)
+            for (ConsumerRecord<Long , TransactionInfo> record : consumerRecords)
             {
-                String stringJson = record.value();
+                TransactionInfo transactionInfo = record.value();
                 System.out.println("key : " + record.key());
-                System.out.println("Received : " + stringJson);
-                try
-                {
-                    TransactionInfo transactionInfo = objectMapper.readValue(stringJson , TransactionInfo.class);
-                    WritingHelper writingHelper = new WritingHelper(transactionInfo);
-                    writingHelper.writeToLog();
-                    System.out.println(writingHelper);
-                }
-                catch (JsonProcessingException e)
-                {
-                    System.out.println("Error Parsing");
-                    System.out.println(e.getMessage());
-                    log.error("Could Not Parse Json in Transaction");
-                }
+                System.out.println("Received : " + transactionInfo);
+                WritingHelper writingHelper = new WritingHelper(transactionInfo);
+                writingHelper.writeToLog();
+                System.out.println(writingHelper);
             }
 
             kafkaConsumer.commitAsync();
         }
     }
 
-    public static Consumer<Long, String> createKafkaConsumer(String bootstrapServers, String consumerGroup)
+    public static Consumer<Long, TransactionInfo> createKafkaConsumer(String bootstrapServers, String consumerGroup)
     {
         Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
-        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        //properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TransactionInfo.class.getName());
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, consumerGroup);
         properties.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
 
